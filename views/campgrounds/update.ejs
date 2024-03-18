@@ -1,0 +1,35 @@
+<% layout('layout/boilerplate') %>
+    <div class="row mb-3">
+        <h1 class="text-center">Edit Campground</h1>
+        <div class="col-6 offset-3">
+            <form method="post" action="/campgrounds/<%= camp._id %>" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Campground title: </label>
+                    <input class="form-control" id="title" name="title" type="text" value="<%= camp.title%>" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Campground location: </label>
+                    <input class="form-control" id="location" name="location" type="text" value="<%= camp.location%>" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Price: </label>
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1">₹</span>
+                        <input class="form-control" placeholder="0.00" id="price" name="price" type="number" aria-describedby="basic-addon1" value="<%= camp.price %>" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="picture">Image url: </label>
+                    <input class="form-control" id="picture" name="picture" type="text" value="<%= camp.picture %>" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="decription">Description: </label>
+                    <textarea class="form-control" id="description" name="description" type="text" value="camp.description"></textarea>
+                </div>
+                <button class="btn btn-success">Submit</button>
+                <div class="mb-3 d-inline">
+                    <a href="/campgrounds" class="btn btn-info">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
