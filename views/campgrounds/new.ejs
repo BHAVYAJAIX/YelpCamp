@@ -1,38 +1,61 @@
 <% layout('layout/boilerplate') %>
 
 <div class="row mb-3">
-    <h1 class="text-center">New Campground</h1>
-    <div class="col-6 offset-3">
-        <form method="post" action="/campgrounds" novalidate class="validated-form">
-            <div class="mb-3">
-                <label class="form-label" for="title">Campground title: </label>
-                <input class="form-control" id="title" name="title" type="text" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="location">Campground location: </label>
-                <input class="form-control" id="location" name="location" type="text" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="price">Price: </label>
-                <div class="input-group">
-                    <span class="input-group-text" id="basic-addon1">₹</span>
-                    <input class="form-control" placeholder="0.00" id="price" name="price" aria-describedby="basic-addon1" required>
-                </div>
-            </div>
-            <div class="mb-3">
+  <h1 class="text-center">New Campground</h1>
+  <div class="col-6 offset-3">
+    <form method="post" action="/campgrounds" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="title">Campground title: </label>
+        <input
+          class="form-control"
+          id="title"
+          name="title"
+          type="text"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Campground location: </label>
+        <input
+          class="form-control"
+          id="location"
+          name="location"
+          type="text"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="price">Price: </label>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">₹</span>
+          <input
+            class="form-control"
+            placeholder="0.00"
+            id="price"
+            name="price"
+            aria-describedby="basic-addon1"
+            required
+          />
+        </div>
+      </div>
+      <input type="file" name="image" />
+      <!-- <div class="mb-3">
                 <label class="form-label" for="picture">Image url: </label>
                 <input class="form-control" id="picture" name="picture" type="text" required>
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="decription">Description: </label>
-                <textarea class="form-control" id="description" name="description" type="text"></textarea>
-            </div>
-            <button class="btn btn-success">Submit</button>
-            <div class="mb-3 d-inline">
-                <a href="/campgrounds" class="btn btn-info">Back</a>
-            </div>
-        </form>
-    </div>
+            </div> -->
+      <div class="mb-3">
+        <label class="form-label" for="decription">Description: </label>
+        <textarea
+          class="form-control"
+          id="description"
+          name="description"
+          type="text"
+        ></textarea>
+      </div>
+      <button class="btn btn-success">Submit</button>
+      <div class="mb-3 d-inline">
+        <a href="/campgrounds" class="btn btn-info">Back</a>
+      </div>
+    </form>
+  </div>
 </div>
-
-    
