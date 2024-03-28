@@ -24,7 +24,12 @@ const seedDB = async () => {
       title: `${sample(descriptors)} ${sample(places)}`,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere explicabo quia omnis sit officia! Doloremque sit omnis qui ex beatae, exercitationem quasi iste assumenda obcaecati sapiente laudantium nulla, illum eum!",
-      picture: "https://source.unsplash.com/random/520x600/?forest",
+      pictures: [
+        {
+          url: "https://res.cloudinary.com/dztwczbjs/image/upload/v1711602717/YelpCamp/ervdj3mzgd02rlzldmt2.jpg",
+          filename: "YelpCamp/ervdj3mzgd02rlzldmt2",
+        },
+      ],
       price: Math.floor(Math.random() * 1000) + 500,
     });
     await camp.save();
